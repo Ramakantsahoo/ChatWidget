@@ -16,7 +16,7 @@ const ChatWidget = () => {
   // Effect to handle WebSocket connection
   useEffect(() => {
     if (isChatOpen && !websocket) {
-      const ws = new WebSocket('wss://api.locuschat.live/webhooks');
+      const ws = new WebSocket('ws://localhost:8000/webhooks');
       setWebsocket(ws);
 
       ws.onopen = () => {
